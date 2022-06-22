@@ -45,7 +45,7 @@ Write-Host "Du hast" $numberOfMatching "Zahlen richtig geraten"
 if ($numberOfMatching -gt 3) {
     Write-Host "Du bist ein Lotto-Talent."
 }else {
-    Write-Host "Vieleicht hast du bei Sportwetten mehr Glück."
+    Write-Host "Vieleicht hast du bei Sportwetten mehr Glueck."
 }
 
 

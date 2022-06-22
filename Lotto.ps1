@@ -7,15 +7,19 @@ for ($i = 0; $i -lt 6; $i++) {
         try{
               #Typ prüfen
               [int]$Eingabe= read-host "Bitte geben Sie eine ganze Zahl zwischen 1 und 42 ein.)"
+              if($Eingabe -gt 0 -and $Eingabe -le 42){
+                $InputOK=$true
+                $userNumbers += $Eingabe
+              }else{
+                  Write-Host "Bitte geben Sie eine gueltige Zahl ein."
+              }
               }
         catch {
-            Write-Host "Bitte geben Sie eine gültige Zahl ein."
+            Write-Host "Bitte geben Sie eine gueltige Zahl ein."
+            
             }
             #Bereich prüfen
-            if($Eingabe -gt 0 -and $Eingabe -le 42){
-              $InputOK=$true
-              $userNumbers += $Eingabe
-            }
+            
     } Until($InputOK -eq $true) 
     
    
@@ -45,7 +49,7 @@ Write-Host "Du hast" $numberOfMatching "Zahlen richtig geraten"
 if ($numberOfMatching -gt 3) {
     Write-Host "Du bist ein Lotto-Talent."
 }else {
-    Write-Host "Vieleicht hast du bei Sportwetten mehr Glueck."
+    Write-Host "Vielleicht hast du bei Sportwetten mehr Glueck."
 }
 
 

@@ -27,8 +27,11 @@ for ($i = 0; $i -lt 6; $i++) {
 
 $numberOfMatching = 0
 
+#iteration
 for ($i = 0; $i -lt 6; $i++) {
+    #iteration
     for ($j = 0; $j -lt 6; $j++) {
+        #alternation
         if($userNumbers[$i] -eq $computerNumbers[$j]){
             $numberOfMatching++
         }
@@ -38,5 +41,11 @@ for ($i = 0; $i -lt 6; $i++) {
 Write-Host "Deine Zahlen: " $userNumbers
 Write-Host "Lotto Zahlen:" $computerNumbers
 Write-Host "Du hast" $numberOfMatching "Zahlen richtig geraten"
+
+if ($numberOfMatching -gt 3) {
+    Write-Host "Du bist ein Lotto-Talent."
+}else {
+    Write-Host "Vieleicht hast du bei Sportwetten mehr Glück."
+}
 
 
